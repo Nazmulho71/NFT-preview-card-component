@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <style>
+      .container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background: hsl(217, 54%, 11%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Outfit", sans-serif;
+      }
+
+      .card {
+        width: 300px;
+        background-color: hsl(216, 50%, 16%);
+        padding: 20px;
+        border-radius: 15px;
+      }
+
+      .image {
+        width: 300px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .image > img {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .image > .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: hsl(178, 100%, 50%, 0.5);
+        opacity: 0;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in-out;
+      }
+
+      .image:hover > .overlay {
+        opacity: 1;
+      }
+
+      .card > h3 {
+        font-size: 20px;
+        font-weight: 400;
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+
+      .card > h3:hover {
+        color: hsl(178, 100%, 50%);
+      }
+
+      .card > p {
+        font-size: 18px;
+        font-weight: 300;
+        color: hsl(215, 51%, 70%);
+        margin-bottom: 5px;
+      }
+
+      .middle-icons,
+      .middle-icons > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .middle-icons div img {
+        margin-right: 5px;
+      }
+
+      .middle-icons > div:first-child {
+        font-weight: 400;
+        color: hsl(178, 100%, 50%);
+      }
+
+      .middle-icons > div:last-child {
+        font-weight: 300;
+        color: hsl(215, 51%, 70%);
+      }
+
+      hr {
+        border-top: 1px solid hsl(215, 32%, 27%);
+        opacity: 0.1;
+      }
+
+      .card-footer {
+        display: flex;
+        align-items: center;
+      }
+
+      .card-footer img {
+        width: 35px;
+        margin-right: 15px;
+        border: 1px solid hsl(0, 0%, 100%);
+        border-radius: 50%;
+      }
+
+      .card-footer p {
+        font-weight: 300;
+        color: hsl(215, 51%, 70%);
+      }
+
+      .card-footer p span {
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+
+      .card-footer p span:hover {
+        color: hsl(178, 100%, 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="image">
+          <img src="/images/image-equilibrium.jpg" alt="" />
+          <div class="overlay"><img src="/images/icon-view.svg" alt="" /></div>
+        </div>
+        <h3>Equilibrium #3429</h3>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+
+        <div class="middle-icons">
+          <div>
+            <img src="/images/icon-ethereum.svg" alt="" />
+            <p>0.041 ETH</p>
+          </div>
+
+          <div>
+            <img src="/images/icon-clock.svg" alt="" />
+            <p>3 days left</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="card-footer">
+          <img src="/images/image-avatar.png" alt="" />
+          <p>Creation of <span>Jules Wyvern</span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
